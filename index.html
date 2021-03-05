@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+    <title>Guess My Number!</title>
+  </head>
+  <body>
+    <!----CSS BACKGROUND ANIMATION CONTAINERS-->
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+
+    <main>
+      <section class="main-game">
+        <div class="audio-controller"><i class="fas fa-volume-up"></i></div>
+        <h1>Guess My Number!</h1>
+        <div class="number">?</div>
+        <p class="between">(Between 1 and 20)</p>
+        <input type="number" class="guess" />
+        <div class="button-container">
+          <button class="btn check"><i class="fas fa-bullseye"></i> Guess!</button>
+          <button class="btn again"><i class="fas fa-undo"></i> Reset!</button>
+        </div>
+      </section>
+      <section class="score-log">
+        <p class="message">Start guessing...</p>
+        <p class="label-score">💯 Current Score: <span class="score">10</span></p>
+        <p class="label-highscore">
+          🥇 Highscore: <span class="highscore">0</span>
+        </p>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
