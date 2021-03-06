@@ -93,7 +93,7 @@ h1 {
 }
 
 .again {
-  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
 input::-webkit-outer-spin-button,
@@ -111,8 +111,20 @@ input::-webkit-inner-spin-button {
   width: 14rem;
   text-align: center;
   display: block;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
   margin-top: 1rem;
+}
+
+.controler-container {
+  display: flex;  
+  align-items: center;  
+  
+}
+
+.up, .down {
+  margin: 1rem;
+  height: 10vh;
+  
 }
 
 .button-container {
@@ -195,7 +207,8 @@ input::-webkit-inner-spin-button {
     font-size: 1.5rem;
   }
   .message {
-    width: 70vw;
+    width: 90vw;
+    font-size: 1.5rem;
   }
   .audio-controller {
     font-size: 2rem;
@@ -218,6 +231,7 @@ input::-webkit-inner-spin-button {
   }
   .message {
     width: 90vw;
+    font-size: 1.5rem;
   }
   .audio-controller {
     font-size: 2rem;
@@ -242,6 +256,7 @@ input::-webkit-inner-spin-button {
   }
   .message {
     width: 90vw;
+    font-size: 1.5rem;
   }
   .audio-controller {
     font-size: 2rem;
@@ -276,6 +291,7 @@ input::-webkit-inner-spin-button {
   }
   .message {
     width: 90vw;
+    font-size: 1.5rem;
   }
   .audio-controller {
     font-size: 2rem;
@@ -310,8 +326,8 @@ input::-webkit-inner-spin-button {
     font-size: 4rem;
   }
   .message {
-    width: 60vw;
-    margin-bottom: 9rem;
+    width: 90vw;
+    font-size: 1.5rem;
   }
 
   .between {
