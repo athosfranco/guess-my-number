@@ -20,10 +20,15 @@
         <h1>Guess My Number!</h1>
         <div class="number">?</div>
         <p class="between">(Between 1 and 20)</p>
-        <input type="number" class="guess" />
+        <div class="controler-container">
+          <button class="btn up"><i class="fas fa-arrow-up"></i></button>
+          <input type="number" class="guess" />
+          <button class="btn down"><i class="fas fa-arrow-down"></i></button>
+        </div>        
         <div class="button-container">
-          <button class="btn check"><i class="fas fa-bullseye"></i> Guess!</button>
           <button class="btn again"><i class="fas fa-undo"></i> Reset!</button>
+          <button class="btn check"><i class="fas fa-bullseye"></i> Guess!</button>
+          
         </div>
       </section>
       <section class="score-log">
