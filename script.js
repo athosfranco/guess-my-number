@@ -9,7 +9,7 @@ let lowerNumberArray = [`😥 Too Low! The number is HIGHER...`, `😩 Too low! 
 
 //GERAR NÚMERO ALEATÓRIO
 let secretNumber = Math.trunc(Math.random() * 20 + 1);
-console.log(`Secret_Value: ${secretNumber}`);
+console.log(`What are you trying to find here?! :P`);
 
 //VARIÁVEL QUE ARMAZENA SCORE E HIGHSCORE
 let score = Number(document.querySelector(".score").textContent);
@@ -26,6 +26,7 @@ document.querySelector(".audio-controller").addEventListener("click", function()
     if (soundOn === true) {
         document.querySelector(".audio-controller").innerHTML = `<i class="fas fa-volume-mute"></i>`;
         soundOn = false; //THE SOUND IS OFF
+
     } else if (soundOn === false) {
         document.querySelector(".audio-controller").innerHTML = `<i class="fas fa-volume-up"></i>`;
         soundOn = true; //THE SOUND IS ON
@@ -36,7 +37,8 @@ document.querySelector(".audio-controller").addEventListener("click", function()
 //RE-ROLL
 document.querySelector(".again").addEventListener("click", function() {
     victoryCheck = false;
-    document.querySelector(".message").textContent = `A new secret number was defined! Try to guess!`;
+    document.querySelector(".guess").value = " ";
+    document.querySelector(".message").textContent = `A new secret number was defined!`;
     document.querySelector(".message").style.background = `rgba(238, 238, 238, 0.185)`;
     secretNumber = Math.trunc(Math.random() * 20 + 1);
     console.log(`New_Secret_Value: ${secretNumber}`);
@@ -90,7 +92,7 @@ document.querySelector(".check").addEventListener("click", function (guess) {
 
 //FUNÇÕES DE VITÓRIA/DERROTA
 function lose() {
-    if (soundOn === true) lostAudio.play();
+    if (soundOn === true) lostAudio.play();    
     document.querySelector(".score").textContent = 0;
     document.querySelector(".message").textContent = `😭 Oh no! You LOST!`;
     document.querySelector(".message").style.background = `rgba(255, 0, 0, 0.5)`;
@@ -98,7 +100,7 @@ function lose() {
 
 function victory() {
     victoryCheck = true;
-    if (soundOn === true) victoryAudio.play();    
+    if (soundOn === true) victoryAudio.play();        
     document.querySelector(".message").style.background = `rgba(94, 255, 0, 0.8)`;
     document.querySelector(".number").innerHTML = secretNumber;    
     document.querySelector(".number").style.background = `rgba(94, 255, 0, 0.8)`;
@@ -110,4 +112,22 @@ function victory() {
         document.querySelector(".message").textContent = `😎 OH WOW! You guessed it right! ✔ `;
     }
 }
+
+//FUNÇÕES QUE CONTROLAM OS BOTÕES PARA SUBIR/DESCER O VALOR
+
+document.querySelector(".up").addEventListener("click", function (x) {
+    
+    x = document.querySelector(".guess").value; 
+    x++;
+    document.querySelector(".guess").value = x;    
+
+})
+
+document.querySelector(".down").addEventListener("click", function (x) {    
+    x = document.querySelector(".guess").value; 
+    x--;
+    document.querySelector(".guess").value = x;
+   
+})
+
 
